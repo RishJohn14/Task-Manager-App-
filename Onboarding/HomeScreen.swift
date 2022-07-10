@@ -10,9 +10,11 @@ import SwiftUI
 struct HomeScreen: View {
     
     @State var isSettings = false
-    @State var firstName = "Rishabh"
-    @State var lastName = "John"
+    @State var firstName = "Set Profile Details"
+    @State var needsEdit = UserDefaults.standard.bool(forKey: "BOOL_KEY")
     
+    let persistenceController = PersistenceController.shared
+    @State var ToDoModel = ToDoListViewModel()
     var body: some View {
         NavigationView
         {
@@ -63,7 +65,7 @@ struct HomeScreen: View {
                 
                     
           }
-            .navigationBarTitle("Home")
+            .navigationBarTitle("Back")
             .navigationBarHidden(true)
             
         }
@@ -121,7 +123,9 @@ struct HomeScreen: View {
                     VStack(spacing:15)
                     {
                         NavigationLink {
-                            Home()
+                            ContentView()
+                                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                            
                         } label: {
                             Image("TaskManager")
                                 .resizable()
@@ -137,7 +141,7 @@ struct HomeScreen: View {
                     VStack(spacing:15)
                     {
                         NavigationLink{
-                            To_Do_View()
+                            To_Do_View(viewModel: ToDoModel)
                         } label: {
                             Image("to do list")
                                 .resizable()
@@ -156,10 +160,14 @@ struct HomeScreen: View {
                 {
                     VStack(spacing:15)
                     {
-                        Image("StudyRoom")
-                            .resizable()
-                            .frame(width: 150, height: 150)
-                            .cornerRadius(20)
+                        NavigationLink {
+                            //Debugging(todoModel: $ToDoModel)
+                        } label: {
+                            Image("StudyRoom")
+                                .resizable()
+                                .frame(width: 150, height: 150)
+                                .cornerRadius(20)
+                        }
                         
                         Text("Study Room")
                             .font(.headline)
@@ -209,8 +217,12 @@ struct HomeScreen: View {
                 
             }
             .sheet(isPresented: $isSettings) {
-                SettingsView(firstName: $firstName, lastName: $lastName)
+                SettingsView(displayName: $firstName)
             }
+//            .sheet(isPresented: $needsEdit){
+//                UserDefaults.standard.set(needsEdit, forKey: "BOOL_KEY")
+//                SettingsView(displayName: $firstName)
+//            }
 
         }
         .padding([.leading],20)

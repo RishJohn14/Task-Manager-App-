@@ -10,68 +10,48 @@ import SwiftUI
 
 struct To_Do_View: View {
     
-    init()
+    @StateObject var todoModel:ToDoListViewModel
+
+    init(viewModel: @autoclosure @escaping() -> ToDoListViewModel)
     {
+        _todoModel = StateObject(wrappedValue: viewModel())
+        
         UITableView.appearance().backgroundColor = UIColor(red: 248/255, green: 193/255, blue: 193/255, alpha: 1)
     }
     
-    @StateObject var todoListVM =  ToDoListViewModel()
-    
     var body: some View {
-        
+      
             List
             {
-                
-                ForEach(todoListVM.todoList){item in
+                ForEach(todoModel.todoList){item in
                     
                     ToDoListRowView(todo:item, onCompletedToggle: {
-                        todoListVM.updateItem(item: item.onCompletedToggle())
+                        todoModel.updateItem(item: item.onCompletedToggle())
                     })
                     
                     
                 }
-                .onDelete(perform: todoListVM.onDelete)
-                    .onMove(perform: todoListVM.onMove)
+                .onDelete(perform: todoModel.onDelete)
+                    .onMove(perform: todoModel.onMove)
                     
             }
             .navigationTitle("Daily To Do List")
-            .overlay(alignment: .topLeading, content: {
-                HStack
-                {
-                    EditButton()
-                    
-                    Spacer()
-                    
-                    NavigationLink {
-                        AddItemView{todo in
-                            todoListVM.onSave(item: todo)
-                        }
-                    } label: {
-                        Text("Add Item")
+            
+                .navigationBarItems(leading: EditButton(), trailing: NavigationLink(destination: {
+                    AddItemView { todo in
+                        todoModel.onSave(item: todo)
                     }
-
-                }
-                .padding(.horizontal,20)
-            })
-        }
-        
-//
-//                .navigationBarItems(leading: EditButton(), trailing: NavigationLink(destination: {
-//                    AddItemView { todo in
-//                        todoListVM.onSave(item: todo)
-//                    }
-//                }, label: {
-//                    Text("Add Item")
-//                }))
-      
-    
+                }, label: {
+                    Text("Add Item")
+                }))
+    }
 }
 
 struct To_Do_View_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView
         {
-            To_Do_View()
+            To_Do_View(viewModel: ToDoListViewModel())
         }
     }
 }

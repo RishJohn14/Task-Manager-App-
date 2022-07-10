@@ -9,13 +9,23 @@ import SwiftUI
 
 
 struct SettingsView: View {
-    @Binding var firstName:String
-    @Binding var lastName:String
-    @State var genderchoice = 0
-    @State var birthday = Date()
+    @State var last:String = UserDefaults.standard.string(forKey: "LAST_KEY") ?? ""
+    @State var first:String = UserDefaults.standard.string(forKey: "FIRST_KEY") ?? ""
+    @State var gender:Int = UserDefaults.standard.integer(forKey: "GENDER_KEY")
+    @State var bday:Date = UserDefaults.standard.object(forKey: "DATE_KEY") as? Date ?? Date()
+    
+    @Binding var displayName:String
+    
     @State var editable = false
     @State var tog = 0
     @State var img = "rectangle.and.pencil.and.ellipsis"
+    
+    let dateRange : ClosedRange<Date> = {
+        let pastlimit = Calendar.current.date(byAdding: .year, value: -80, to: Date())!
+        let today = Calendar.current.date(byAdding: .day, value: 0, to: Date())!
+        return pastlimit...today
+        
+    }()
     var body: some View {
         NavigationView
         {
@@ -23,13 +33,14 @@ struct SettingsView: View {
             Form
             {
                 Section(header: Text("Personal Information")) {
-                    TextField(firstName, text: $firstName)
-                    TextField(lastName, text: $lastName)
-                    DatePicker("Date of Birth", selection: $birthday, displayedComponents: .date)
+                    TextField(first, text: $first)
+                    TextField(last, text: $last)
+                    
+                    DatePicker("Date of Birth", selection: $bday,in: dateRange, displayedComponents: .date)
                     HStack
                     {
                         Text("Gender: ")
-                        Picker(selection: $genderchoice) {
+                        Picker(selection: $gender) {
                             Text("Male").tag(0)
                             Text("Female").tag(1)
                         } label: {
@@ -65,6 +76,11 @@ struct SettingsView: View {
                         else
                         {
                             tog = 0
+                            UserDefaults.standard.set(last, forKey: "LAST_KEY")
+                            UserDefaults.standard.set(first, forKey: "FIRST_KEY")
+                            UserDefaults.standard.set(gender, forKey: "GENDER_KEY")
+                            UserDefaults.standard.set(bday, forKey: "DATE_KEY")
+                            displayName = first
                             editable = false
                             img = "rectangle.and.pencil.and.ellipsis"
                         }

@@ -84,8 +84,10 @@ struct Home: View {
             AddNewTask().environmentObject(taskModel)
             
         }
+        .navigationTitle("Task Manager")
         
     }
+    
     //MARK: TaskView
     @ViewBuilder
     func TaskView()->some View

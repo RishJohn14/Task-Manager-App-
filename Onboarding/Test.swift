@@ -139,7 +139,7 @@ struct Test: View {
                     VStack(spacing:15)
                     {
                         NavigationLink {
-                            To_Do_View()
+                            //To_Do_View()
                         } label: {
                             Image("to do list")
                                 .resizable()

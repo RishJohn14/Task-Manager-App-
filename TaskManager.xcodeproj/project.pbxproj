@@ -19,6 +19,7 @@
 		DA28539A286B203500EC3DD2 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA285399286B203500EC3DD2 /* AccountView.swift */; };
 		DA28539C286B235E00EC3DD2 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28539B286B235E00EC3DD2 /* HomeScreen.swift */; };
 		DA28539E286B475600EC3DD2 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28539D286B475600EC3DD2 /* Test.swift */; };
+		DA8886DA287AF3FE00326F44 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8886D9287AF3FE00326F44 /* LaunchScreen.swift */; };
 		DAED25F32862FA5B0094849D /* TaskManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED25F22862FA5B0094849D /* TaskManagerApp.swift */; };
 		DAED25F52862FA5B0094849D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED25F42862FA5B0094849D /* ContentView.swift */; };
 		DAED25F72862FA5E0094849D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAED25F62862FA5E0094849D /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		DA285399286B203500EC3DD2 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		DA28539B286B235E00EC3DD2 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		DA28539D286B475600EC3DD2 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		DA8886D9287AF3FE00326F44 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		DAED25EF2862FA5B0094849D /* TaskManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAED25F22862FA5B0094849D /* TaskManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerApp.swift; sourceTree = "<group>"; };
 		DAED25F42862FA5B0094849D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 			children = (
 				DA28539B286B235E00EC3DD2 /* HomeScreen.swift */,
 				DA28539D286B475600EC3DD2 /* Test.swift */,
+				DA8886D9287AF3FE00326F44 /* LaunchScreen.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -151,9 +154,9 @@
 				DA285388286B1E4900EC3DD2 /* To-Do List */,
 				DA285383286B1C1A00EC3DD2 /* Calculator */,
 				DAED25F12862FA5B0094849D /* TaskManager */,
-				DA285380286B12B500EC3DD2 /* Onboarding */,
 				DAED26072862FA5F0094849D /* TaskManagerTests */,
 				DAED25F62862FA5E0094849D /* Assets.xcassets */,
+				DA285380286B12B500EC3DD2 /* Onboarding */,
 				DAED26112862FA5F0094849D /* TaskManagerUITests */,
 				DAED25F02862FA5B0094849D /* Products */,
 			);
@@ -368,6 +371,7 @@
 				DA28539C286B235E00EC3DD2 /* HomeScreen.swift in Sources */,
 				DA28538F286B1E8100EC3DD2 /* To-Do View.swift in Sources */,
 				DAED26272862FDBF0094849D /* TaskViewModel.swift in Sources */,
+				DA8886DA287AF3FE00326F44 /* LaunchScreen.swift in Sources */,
 				DAED25F52862FA5B0094849D /* ContentView.swift in Sources */,
 				DA28538B286B1E6A00EC3DD2 /* To-Do Model.swift in Sources */,
 				DAED26252862FBBF0094849D /* Home.swift in Sources */,
