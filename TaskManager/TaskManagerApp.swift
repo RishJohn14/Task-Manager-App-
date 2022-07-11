@@ -12,7 +12,7 @@ struct TaskManagerApp: App {
     var body: some Scene {
         WindowGroup {
             
-            HomeScreen()
+            LaunchScreen()
        }
     }
 }

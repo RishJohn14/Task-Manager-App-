@@ -11,9 +11,15 @@ struct LaunchScreen: View {
     
     @AppStorage("currentPage") var currentPage = 1
     var body: some View {
-        WalkthroughScreen()
         
-        //if currentPage > totalPages then call Home()
+        if currentPage > totalPages
+        {
+            HomeScreen()
+        }
+        else
+        {
+            WalkthroughScreen()
+        }
     }
 }
 
@@ -36,24 +42,26 @@ struct HomeFake : View
 struct WalkthroughScreen : View
 {
     @AppStorage("currentPage") var currentPage = 1
-    
+    var firstText = "A tool to help students manage time and tasks effectively"
+    var secondText = "Keep track of time spent studying and breaks taken too!"
+    var thirdText = "Set targets to maintain a steady progress, ultimately achieving your goals!"
     var body: some View
     {
         ZStack{
             if currentPage == 1
             {
                 
-                ScreenView(image: "First", title: "First Screen", details: "Trial Test 1",BG: Color(red: 56/255, green: 204/255, blue: 153/255))
+                ScreenView(image: "First", title: "Task Manager App", details: firstText ,BG: Color(red: 56/255, green: 204/255, blue: 153/255))
                     .transition(.scale)
             }
             else if currentPage == 2
             {
-                ScreenView(image: "Second", title: "Second Screen", details: "Trial Test 2", BG: Color(red: 53/255, green: 101/255, blue: 254/255))
+                ScreenView(image: "Second", title: "Work Smart!", details: secondText, BG: Color(red: 53/255, green: 101/255, blue: 254/255))
                     .transition(.scale)
             }
             else if currentPage == 3
             {
-                ScreenView(image: "Third", title: "Third Screen", details: "Trial Test 3", BG:Color(red: 237/255, green: 140/255, blue: 55/255))
+                ScreenView(image: "Third", title: "Never miss a Deadline", details: thirdText, BG:Color(red: 237/255, green: 140/255, blue: 55/255))
                     .transition(.scale)
             }
             else
@@ -67,14 +75,13 @@ struct WalkthroughScreen : View
             Button {
                 withAnimation(.easeInOut){
                   
-                    if currentPage < totalPages
+                    if currentPage <= totalPages
                     {
                         currentPage += 1
                     }
                     else
                     {
                         currentPage = 1
-                        
                     }
                 }
             } label: {
@@ -121,7 +128,7 @@ struct ScreenView: View {
             {
                 if currentPage == 1
                 {
-                    Text("Hello Member")
+                    Text("Welcome!!")
                         .font(.title)
                         .fontWeight(.semibold)
                         .kerning(1.3)
@@ -173,12 +180,13 @@ struct ScreenView: View {
                 .font(.title)
                 .fontWeight(.bold)
                 .foregroundColor(.black)
-                .padding(.top)
+                .padding([.top,.bottom])
             
             Text(details)
                 .fontWeight(.semibold)
-                .kerning(1.3)
+                .kerning(1.0)
                 .multilineTextAlignment(.center)
+            
             Spacer(minLength: 120)
         }
         .background(BG.cornerRadius(10).ignoresSafeArea())
