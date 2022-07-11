@@ -8,7 +8,8 @@
 import SwiftUI
 
 
-struct SettingsView: View {
+struct SettingsView:View
+{
     @State var last:String = UserDefaults.standard.string(forKey: "LAST_KEY") ?? ""
     @State var first:String = UserDefaults.standard.string(forKey: "FIRST_KEY") ?? ""
     @State var gender:Int = UserDefaults.standard.integer(forKey: "GENDER_KEY")

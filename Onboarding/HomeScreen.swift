@@ -10,11 +10,13 @@ import SwiftUI
 struct HomeScreen: View {
     
     @State var isSettings = false
-    @State var firstName = "Set Profile Details"
+    //@State var firstName = "Set Profile Details"
     @State var needsEdit = UserDefaults.standard.bool(forKey: "BOOL_KEY")
-    
+    @AppStorage("firstName") var firstName = "Set Profile Details"
     let persistenceController = PersistenceController.shared
     @State var ToDoModel = ToDoListViewModel()
+    
+    
     var body: some View {
         NavigationView
         {
@@ -219,11 +221,6 @@ struct HomeScreen: View {
             .sheet(isPresented: $isSettings) {
                 SettingsView(displayName: $firstName)
             }
-//            .sheet(isPresented: $needsEdit){
-//                UserDefaults.standard.set(needsEdit, forKey: "BOOL_KEY")
-//                SettingsView(displayName: $firstName)
-//            }
-
         }
         .padding([.leading],20)
     }
