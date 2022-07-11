@@ -16,6 +16,10 @@ struct HomeScreen: View {
     let persistenceController = PersistenceController.shared
     @State var ToDoModel = ToDoListViewModel()
     
+    let currentDateTimeInterval = Int(Date().timeIntervalSinceReferenceDate)
+    var storedDaysCount:Int = UserDefaults.standard.integer(forKey: "DaysCount")
+    let lastTimeinterval = UserDefaults.standard.integer(forKey: "LastTime")
+    
     
     var body: some View {
         NavigationView
@@ -37,28 +41,29 @@ struct HomeScreen: View {
                         {
                             VStack(alignment: .leading)
                             {
-                                Text("22")
-                                    .font(.system(size: 70))
+                                Text(getCurrentTime())
+                                    .font(.system(size: 45))
                                     .bold()
                                     .padding(.leading)
-                                
-                                Text("Days to next Due Date")
+
+                                Text(getDate())
                                     .font(.system(size: 18))
                                     .bold()
-                                    .padding(.leading)
+                                    .padding(.leading,25)
                             }
                             Spacer()
-                            Image("Stopwatch")
+                            
+                            Image(systemName: "calendar.badge.clock")
                                 .resizable()
-                                .frame(width: 70, height: 70)
+                                .frame(width: 80, height: 75)
                                 .padding(.trailing,29)
-                        
+
                         }
                         .padding(.leading, 10)
-                   
+                    
                     Buttons()
                     
-                    Spacer()
+                    Spacer(minLength: 80)
                     
                 }
                 .overlay(alignment: .bottomLeading, content: {
@@ -87,33 +92,50 @@ struct HomeScreen: View {
                     .cornerRadius(15)
                     .edgesIgnoringSafeArea(.top)
                 
-                VStack(alignment: .leading,spacing: 0)
+                HStack
                 {
-                    Text("Welcome Back!")
-                        .foregroundColor(.white)
-                        .font(.system(size: 30))
-                        .bold()
-                    HStack
+                    VStack(alignment: .leading, spacing:10)
                     {
-                        Text("You are on a X Day Streak")
-                        .foregroundColor(.white)
-                        .font(.headline)
-                        Spacer()
-                        Image("Hands")
-                            .resizable()
-                            .frame(width:60, height:55)
-                            .padding(.bottom)
+                        Text("  Welcome Back!")
+                            .foregroundColor(.white)
+                            .font(.system(size: 30))
+                            .bold()
+                        
+                        
+                        Text("     Get Started")
+                            .foregroundColor(.white)
+                            .font(.system(size: 23))
                     }
+                    Spacer()
+                    Image("Stacks")
+                        .resizable()
+                        .frame(width: 70, height: 70, alignment: .trailing)
                     
                 }
                 .padding(.horizontal)
-                
-                
-                
+                .padding(.bottom,40)
             }
             
         }
         .frame(width: UIScreen.main.bounds.width , height: UIScreen.main.bounds.height/5)
+    }
+    
+    func getCurrentTime() -> String
+    {
+        let formatter = DateFormatter()
+        
+        formatter.timeStyle = .short
+        let timeString = formatter.string(from: Date())
+        return timeString
+    }
+    
+    func getDate()->String
+    {
+        let formatter = DateFormatter()
+        
+        formatter.dateStyle = .full
+        let datestring = formatter.string(from: Date())
+        return datestring
     }
     
     func Buttons() -> some View
@@ -224,6 +246,8 @@ struct HomeScreen: View {
         }
         .padding([.leading],20)
     }
+    
+    
 }
 
 

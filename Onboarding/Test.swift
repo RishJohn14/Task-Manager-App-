@@ -52,9 +52,9 @@ struct Test: View {
                             }
                             .padding(.leading, 10)
                         
-                        Buttons()
+                        Middle()
                         
-                        Spacer()
+                        Spacer(minLength: 100)
                         
                          
                     }
@@ -71,7 +71,23 @@ struct Test: View {
     }
     
     
-    
+    func Middle() -> some View
+    {
+        ZStack
+        {
+            GeometryReader
+            {geo in
+                Rectangle()
+                .foregroundColor(.red)
+                .opacity(0.3)
+                .cornerRadius(10)
+                .frame(width: geo.size.width, height: geo.size.height * 3 , alignment: .center)
+            
+                Text("Test")
+            }
+        }
+        
+    }
     func Header()->some View
     {
         GeometryReader
@@ -112,83 +128,6 @@ struct Test: View {
             
         }
         .frame(width: UIScreen.main.bounds.width , height: UIScreen.main.bounds.height/5)
-    }
-    
-    func Buttons() -> some View
-    {
-            VStack(spacing:0)
-            {
-                HStack(spacing:35)
-                {
-                    VStack(spacing:15)
-                    {
-                        NavigationLink {
-                            Home()
-                        } label: {
-                            Image("TaskManager")
-                                .resizable()
-                                .frame(width: 150, height: 150)
-                                .cornerRadius(20)
-                        }
-                        Text("Task Manager")
-                            .font(.headline)
-                            .bold()
-                    }
-                    .padding([.leading, .top],20)
-                    
-                    VStack(spacing:15)
-                    {
-                        NavigationLink {
-                            //To_Do_View()
-                        } label: {
-                            Image("to do list")
-                                .resizable()
-                                .frame(width: 150, height: 150)
-                                .cornerRadius(20)
-                        }
-                        Text("To - Do List")
-                            .font(.headline)
-                            .bold()
-                    }
-                    .padding([.trailing, .top],20)
-                }
-                
-                HStack(spacing: 35)
-                {
-                    VStack(spacing:15)
-                    {
-                        NavigationLink {
-                            //
-                        } label: {
-                            Image("StudyRoom")
-                                .resizable()
-                                .frame(width: 150, height: 150)
-                                .cornerRadius(20)
-                        }
-                        Text("Study Room")
-                            .font(.headline)
-                            .bold()
-                    }
-                    .padding([.leading, .top],20)
-                    
-                    VStack(spacing:15)
-                    {
-                        NavigationLink {
-                            Calculator()
-                        } label: {
-                            Image("Calculator")
-                                .resizable()
-                                .frame(width: 150, height: 150)
-                                .cornerRadius(20)
-                        }
-                        Text("Calculator")
-                            .font(.headline)
-                            .bold()
-                    }
-                    .padding([.trailing, .top],20)
-                }
-            }
-        
     }
            
     func Footer() -> some View
