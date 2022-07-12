@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1A7143287D3A34008FA668 /* StudyRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A7142287D3A34008FA668 /* StudyRoom.swift */; };
+		DA1A7145287D436B008FA668 /* ProgressRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A7144287D436B008FA668 /* ProgressRoom.swift */; };
+		DA1A7147287D8B4A008FA668 /* ProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A7146287D8B4A008FA668 /* ProgressRing.swift */; };
+		DA1A7149287D95B8008FA668 /* ProgressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A7148287D95B8008FA668 /* ProgressManager.swift */; };
 		DA28537F2865BBC100EC3DD2 /* DynamicFiltering.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28537E2865BBC100EC3DD2 /* DynamicFiltering.swift */; };
 		DA285387286B1D2E00EC3DD2 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA285386286B1D2E00EC3DD2 /* Calculator.swift */; };
 		DA28538B286B1E6A00EC3DD2 /* To-Do Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28538A286B1E6A00EC3DD2 /* To-Do Model.swift */; };
@@ -52,6 +56,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA1A7142287D3A34008FA668 /* StudyRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoom.swift; sourceTree = "<group>"; };
+		DA1A7144287D436B008FA668 /* ProgressRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRoom.swift; sourceTree = "<group>"; };
+		DA1A7146287D8B4A008FA668 /* ProgressRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRing.swift; sourceTree = "<group>"; };
+		DA1A7148287D95B8008FA668 /* ProgressManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressManager.swift; sourceTree = "<group>"; };
 		DA28537E2865BBC100EC3DD2 /* DynamicFiltering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFiltering.swift; sourceTree = "<group>"; };
 		DA285386286B1D2E00EC3DD2 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		DA28538A286B1E6A00EC3DD2 /* To-Do Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "To-Do Model.swift"; sourceTree = "<group>"; };
@@ -107,6 +115,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA1A7140287D3A12008FA668 /* StudyRoom */ = {
+			isa = PBXGroup;
+			children = (
+				DA1A7142287D3A34008FA668 /* StudyRoom.swift */,
+				DA1A7144287D436B008FA668 /* ProgressRoom.swift */,
+				DA1A7146287D8B4A008FA668 /* ProgressRing.swift */,
+				DA1A7148287D95B8008FA668 /* ProgressManager.swift */,
+			);
+			path = StudyRoom;
+			sourceTree = "<group>";
+		};
 		DA285380286B12B500EC3DD2 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +169,7 @@
 		DAED25E62862FA5B0094849D = {
 			isa = PBXGroup;
 			children = (
+				DA1A7140287D3A12008FA668 /* StudyRoom */,
 				DA285396286B1FCA00EC3DD2 /* Settings */,
 				DA285388286B1E4900EC3DD2 /* To-Do List */,
 				DA285383286B1C1A00EC3DD2 /* Calculator */,
@@ -365,6 +385,8 @@
 				DA285393286B1EE300EC3DD2 /* AddItemView.swift in Sources */,
 				DA28539E286B475600EC3DD2 /* Test.swift in Sources */,
 				DA285398286B1FD400EC3DD2 /* Settings View.swift in Sources */,
+				DA1A7143287D3A34008FA668 /* StudyRoom.swift in Sources */,
+				DA1A7145287D436B008FA668 /* ProgressRoom.swift in Sources */,
 				DA28539A286B203500EC3DD2 /* AccountView.swift in Sources */,
 				DA285395286B1F0000EC3DD2 /* AddItemViewModel.swift in Sources */,
 				DA285387286B1D2E00EC3DD2 /* Calculator.swift in Sources */,
@@ -373,6 +395,8 @@
 				DAED26272862FDBF0094849D /* TaskViewModel.swift in Sources */,
 				DA8886DA287AF3FE00326F44 /* LaunchScreen.swift in Sources */,
 				DAED25F52862FA5B0094849D /* ContentView.swift in Sources */,
+				DA1A7149287D95B8008FA668 /* ProgressManager.swift in Sources */,
+				DA1A7147287D8B4A008FA668 /* ProgressRing.swift in Sources */,
 				DA28538B286B1E6A00EC3DD2 /* To-Do Model.swift in Sources */,
 				DAED26252862FBBF0094849D /* Home.swift in Sources */,
 				DAED2629286304E70094849D /* AddNewTask.swift in Sources */,

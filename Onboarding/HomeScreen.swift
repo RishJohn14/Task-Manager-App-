@@ -185,7 +185,7 @@ struct HomeScreen: View {
                     VStack(spacing:15)
                     {
                         NavigationLink {
-                            //Debugging(todoModel: $ToDoModel)
+                            StudyRoom()
                         } label: {
                             Image("StudyRoom")
                                 .resizable()
