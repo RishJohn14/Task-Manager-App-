@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ProgressRoom: View {
     @State var tog: Int
-    @StateObject var progmanager = progressmanager()
     
     var body: some View {
             GeometryReader
@@ -17,6 +16,7 @@ struct ProgressRoom: View {
                 ZStack
                {
                    let time = calc(choice: tog)
+                   
                    Image("BG")
                     .resizable()
                     .ignoresSafeArea()
@@ -33,23 +33,11 @@ struct ProgressRoom: View {
                        Text("Study Plan: \(time) mins")
                            .foregroundColor(.white)
                        
-                       ProgressRing().environmentObject(progressmanager())
+                       
+                       Ring(defaultTimeRemaining: CGFloat(time*60), timeRemaining: CGFloat(time*60))
+                       
                        Spacer()
-                       Button {
-                           progmanager.togglestate()
-                       } label: {
-                           Text(progmanager.timerstate == .notStarted ? "Begin" : "End")
-                               .foregroundColor(.black)
-                               .font(.title3)
-                               .kerning(1)
-                               .fontWeight(.semibold)
-                               .padding()
-                               .background {
-                                   Capsule()
-                                       .fill(.white)
-                                       .opacity(0.8)
-                               }
-                       }
+                       
 
                     }
                     

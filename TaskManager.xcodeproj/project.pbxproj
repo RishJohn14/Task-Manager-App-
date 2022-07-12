@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA1A29BD287DA4CB00B1EEE8 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28539D286B475600EC3DD2 /* Test.swift */; };
 		DA1A7143287D3A34008FA668 /* StudyRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A7142287D3A34008FA668 /* StudyRoom.swift */; };
 		DA1A7145287D436B008FA668 /* ProgressRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A7144287D436B008FA668 /* ProgressRoom.swift */; };
-		DA1A7147287D8B4A008FA668 /* ProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A7146287D8B4A008FA668 /* ProgressRing.swift */; };
-		DA1A7149287D95B8008FA668 /* ProgressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1A7148287D95B8008FA668 /* ProgressManager.swift */; };
 		DA28537F2865BBC100EC3DD2 /* DynamicFiltering.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28537E2865BBC100EC3DD2 /* DynamicFiltering.swift */; };
 		DA285387286B1D2E00EC3DD2 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA285386286B1D2E00EC3DD2 /* Calculator.swift */; };
 		DA28538B286B1E6A00EC3DD2 /* To-Do Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28538A286B1E6A00EC3DD2 /* To-Do Model.swift */; };
@@ -22,8 +21,8 @@
 		DA285398286B1FD400EC3DD2 /* Settings View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA285397286B1FD400EC3DD2 /* Settings View.swift */; };
 		DA28539A286B203500EC3DD2 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA285399286B203500EC3DD2 /* AccountView.swift */; };
 		DA28539C286B235E00EC3DD2 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28539B286B235E00EC3DD2 /* HomeScreen.swift */; };
-		DA28539E286B475600EC3DD2 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA28539D286B475600EC3DD2 /* Test.swift */; };
 		DA8886DA287AF3FE00326F44 /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8886D9287AF3FE00326F44 /* LaunchScreen.swift */; };
+		DAA62CA5287DAEF700E20377 /* Ring.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAA62CA4287DAEF700E20377 /* Ring.swift */; };
 		DAED25F32862FA5B0094849D /* TaskManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED25F22862FA5B0094849D /* TaskManagerApp.swift */; };
 		DAED25F52862FA5B0094849D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAED25F42862FA5B0094849D /* ContentView.swift */; };
 		DAED25F72862FA5E0094849D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAED25F62862FA5E0094849D /* Assets.xcassets */; };
@@ -58,8 +57,6 @@
 /* Begin PBXFileReference section */
 		DA1A7142287D3A34008FA668 /* StudyRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyRoom.swift; sourceTree = "<group>"; };
 		DA1A7144287D436B008FA668 /* ProgressRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRoom.swift; sourceTree = "<group>"; };
-		DA1A7146287D8B4A008FA668 /* ProgressRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRing.swift; sourceTree = "<group>"; };
-		DA1A7148287D95B8008FA668 /* ProgressManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressManager.swift; sourceTree = "<group>"; };
 		DA28537E2865BBC100EC3DD2 /* DynamicFiltering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFiltering.swift; sourceTree = "<group>"; };
 		DA285386286B1D2E00EC3DD2 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		DA28538A286B1E6A00EC3DD2 /* To-Do Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "To-Do Model.swift"; sourceTree = "<group>"; };
@@ -73,6 +70,7 @@
 		DA28539B286B235E00EC3DD2 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		DA28539D286B475600EC3DD2 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		DA8886D9287AF3FE00326F44 /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
+		DAA62CA4287DAEF700E20377 /* Ring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ring.swift; sourceTree = "<group>"; };
 		DAED25EF2862FA5B0094849D /* TaskManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaskManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAED25F22862FA5B0094849D /* TaskManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManagerApp.swift; sourceTree = "<group>"; };
 		DAED25F42862FA5B0094849D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,8 +118,7 @@
 			children = (
 				DA1A7142287D3A34008FA668 /* StudyRoom.swift */,
 				DA1A7144287D436B008FA668 /* ProgressRoom.swift */,
-				DA1A7146287D8B4A008FA668 /* ProgressRing.swift */,
-				DA1A7148287D95B8008FA668 /* ProgressManager.swift */,
+				DAA62CA4287DAEF700E20377 /* Ring.swift */,
 			);
 			path = StudyRoom;
 			sourceTree = "<group>";
@@ -130,7 +127,6 @@
 			isa = PBXGroup;
 			children = (
 				DA28539B286B235E00EC3DD2 /* HomeScreen.swift */,
-				DA28539D286B475600EC3DD2 /* Test.swift */,
 				DA8886D9287AF3FE00326F44 /* LaunchScreen.swift */,
 			);
 			path = Onboarding;
@@ -177,6 +173,7 @@
 				DAED26072862FA5F0094849D /* TaskManagerTests */,
 				DAED25F62862FA5E0094849D /* Assets.xcassets */,
 				DA285380286B12B500EC3DD2 /* Onboarding */,
+				DA28539D286B475600EC3DD2 /* Test.swift */,
 				DAED26112862FA5F0094849D /* TaskManagerUITests */,
 				DAED25F02862FA5B0094849D /* Products */,
 			);
@@ -383,8 +380,8 @@
 				DAED25FC2862FA5E0094849D /* Persistence.swift in Sources */,
 				DA285391286B1EC300EC3DD2 /* ToDoListRowView.swift in Sources */,
 				DA285393286B1EE300EC3DD2 /* AddItemView.swift in Sources */,
-				DA28539E286B475600EC3DD2 /* Test.swift in Sources */,
 				DA285398286B1FD400EC3DD2 /* Settings View.swift in Sources */,
+				DA1A29BD287DA4CB00B1EEE8 /* Test.swift in Sources */,
 				DA1A7143287D3A34008FA668 /* StudyRoom.swift in Sources */,
 				DA1A7145287D436B008FA668 /* ProgressRoom.swift in Sources */,
 				DA28539A286B203500EC3DD2 /* AccountView.swift in Sources */,
@@ -395,8 +392,7 @@
 				DAED26272862FDBF0094849D /* TaskViewModel.swift in Sources */,
 				DA8886DA287AF3FE00326F44 /* LaunchScreen.swift in Sources */,
 				DAED25F52862FA5B0094849D /* ContentView.swift in Sources */,
-				DA1A7149287D95B8008FA668 /* ProgressManager.swift in Sources */,
-				DA1A7147287D8B4A008FA668 /* ProgressRing.swift in Sources */,
+				DAA62CA5287DAEF700E20377 /* Ring.swift in Sources */,
 				DA28538B286B1E6A00EC3DD2 /* To-Do Model.swift in Sources */,
 				DAED26252862FBBF0094849D /* Home.swift in Sources */,
 				DAED2629286304E70094849D /* AddNewTask.swift in Sources */,

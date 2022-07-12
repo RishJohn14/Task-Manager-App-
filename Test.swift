@@ -1,20 +1,20 @@
 //
-//  ProgressRing.swift
+//  Test.swift
 //  TaskManager
 //
-//  Created by Rishabh Alexander John on 12/7/22.
+//  Created by Rishabh Alexander John on 28/6/22.
 //
 
 import SwiftUI
 
-struct ProgressRing: View {
-    @EnvironmentObject var progmanager : progressmanager
+struct Test: View {
+    //@EnvironmentObject var progmanager : progressmanager
     @State var progress = 0.0
     var body: some View {
         ZStack
         {
-//            Color(.black)
-//                .ignoresSafeArea()
+            Color(.black)
+                .ignoresSafeArea()
             ZStack
             {
                 
@@ -40,11 +40,11 @@ struct ProgressRing: View {
                     {
                         Text("Elapsed Time")
                             .opacity(0.8)
-                            //.foregroundColor(.white)
+                            .foregroundColor(.white)
                         
                         Text("0:00")
                             .fontWeight(.bold)
-                            //.foregroundColor(.white)
+                            .foregroundColor(.white)
                             .font(.title)
                     }
                     .padding(.top)
@@ -52,11 +52,11 @@ struct ProgressRing: View {
                     {
                         Text("Remaining Time")
                             .opacity(0.8)
-                            //.foregroundColor(.white)
+                            .foregroundColor(.white)
                         
                         Text("0:00")
                             .fontWeight(.bold)
-                            //.foregroundColor(.white)
+                            .foregroundColor(.white)
                             .font(.title2)
                     }
                     
@@ -73,9 +73,8 @@ struct ProgressRing: View {
     }
 }
 
-struct ProgressRing_Previews: PreviewProvider {
+struct Test_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressRing()
-            .environmentObject(progressmanager())
+        Test()
     }
 }
