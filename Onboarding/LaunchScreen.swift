@@ -12,13 +12,14 @@ struct LaunchScreen: View {
     @AppStorage("currentPage") var currentPage = 1
     var body: some View {
         
-//        if currentPage > totalPages
-//        {
-//            HomeScreen()
-//        }
-//        else
-//        {
+        if currentPage > totalPages
+        {
+            HomeScreen()
+        }
+        else
+        {
             WalkthroughScreen()
+        }
         
     }
 }
