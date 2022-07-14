@@ -52,7 +52,7 @@ struct WalkthroughScreen : View
             if currentPage == 1
             {
                 
-                ScreenView(image: "First", title: "Task Manager App", details: firstText ,BG: Color(red: 56/255, green: 204/255, blue: 153/255))
+                ScreenView(image: "First", title: "Temporatio", details: firstText ,BG: Color(red: 56/255, green: 204/255, blue: 153/255))
                     .transition(.scale)
             }
             else if currentPage == 2

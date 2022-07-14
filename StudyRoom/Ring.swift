@@ -78,12 +78,6 @@ struct Ring: View {
         
     }
     
-    func calc(value: Double, percentval: Double)-> Double
-    {
-        let val = value*percentval
-        return 2.3
-    }
-    
     
 }
 
