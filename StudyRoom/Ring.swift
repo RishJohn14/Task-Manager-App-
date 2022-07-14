@@ -29,7 +29,7 @@ struct Ring: View {
                     .stroke(Color.gray.opacity(0.2), style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
                 
                 Circle()
-                    .trim(from: 0, to: 1 - ((defaultTimeRemaining-timeRemaining)/defaultTimeRemaining))
+                    .trim(from:0, to: ((defaultTimeRemaining-timeRemaining)/defaultTimeRemaining))
                     .stroke(AngularGradient(gradient: Gradient(colors: [.white]), center: .center), style: StrokeStyle(lineWidth: lineWidth, lineCap: .round))
                     .opacity(0.7)
                     .rotationEffect(.degrees(-90))

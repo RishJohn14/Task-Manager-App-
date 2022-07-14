@@ -221,7 +221,7 @@ struct Home: View {
     
     @ViewBuilder
     func CustomSegmentedBar()->some View{
-        let tabs = ["Today","Upcoming","Task Done","Failed"]
+        let tabs = ["Today","Upcoming","Task Done"]
         
         HStack(spacing:10)
         {

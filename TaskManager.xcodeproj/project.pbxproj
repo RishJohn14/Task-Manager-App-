@@ -165,6 +165,7 @@
 		DAED25E62862FA5B0094849D = {
 			isa = PBXGroup;
 			children = (
+				DAED25F22862FA5B0094849D /* TaskManagerApp.swift */,
 				DA1A7140287D3A12008FA668 /* StudyRoom */,
 				DA285396286B1FCA00EC3DD2 /* Settings */,
 				DA285388286B1E4900EC3DD2 /* To-Do List */,
@@ -194,7 +195,6 @@
 			children = (
 				DAED26232862FBA80094849D /* ViewModel */,
 				DAED26222862FB970094849D /* View */,
-				DAED25F22862FA5B0094849D /* TaskManagerApp.swift */,
 				DAED25F42862FA5B0094849D /* ContentView.swift */,
 				DAED25FB2862FA5E0094849D /* Persistence.swift */,
 				DAED25FD2862FA5E0094849D /* TaskManager.xcdatamodeld */,
